@@ -17,6 +17,28 @@ Influx Node with your db and take a look @function node: "fields and tags".
 Mqtt Topic from Shelly
 Path of Log file
 ```
+Hint:
+
+To store .flow. context variables in localfilesystem turn it on in settings.js:
+
+https://nodered.org/docs/user-guide/context
+
+Otherwise you must backup and restore context variables on nodered restart.
+In my example:
+```
+grep -C5 contextStorage .node-red/settings.js
+    // Context Storage
+    // The following property can be used to enable context storage. The configuration
+    // provided here will enable file-based context that flushes to disk every 30 seconds.
+    // Refer to the documentation for further options: https://nodered.org/docs/api/context/
+    //
+    contextStorage: {
+        default: "file",
+        memoryOnly: { module: 'memory' },
+        file: { module : 'localfilesystem' }
+        },
+```
+
 What to do?
 Prize calculation on changed prizes with correct historical data. eg: When change cost/month -> calculate prize from history until today with old cost/month but from now on with new cost/month and summarize it.
 
