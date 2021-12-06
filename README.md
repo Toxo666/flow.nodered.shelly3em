@@ -23,7 +23,6 @@ To store .flow. context variables in localfilesystem turn it on in settings.js:
 
 https://nodered.org/docs/user-guide/context
 
-Otherwise you must backup and restore context variables on nodered restart.
 In my example:
 ```
 grep -C5 contextStorage .node-red/settings.js
@@ -38,6 +37,8 @@ grep -C5 contextStorage .node-red/settings.js
         file: { module : 'localfilesystem' }
         },
 ```
+Otherwise you must backup and restore context variables on nodered restart.
+
 
 What to do?
 Prize calculation on changed prizes with correct historical data. eg: When change cost/month -> calculate prize from history until today with old cost/month but from now on with new cost/month and summarize it.
